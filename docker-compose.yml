@@ -1,0 +1,9 @@
+services:
+  prolog:
+    image: swipl:stable
+    container_name: prolog
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app
+    working_dir: /app
