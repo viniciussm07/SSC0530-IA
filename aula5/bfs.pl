@@ -14,7 +14,7 @@ caminho1(O, D, Cam) :-
 caminho2([[D|C]|_], D, [D|C]).
 caminho2([[A|R]|Outros], D, C) :-
     todos_filhos(A, R, L),
-    append(L, Outros, L1),
+    append(Outros, L, L1),
     caminho2(L1, D, C).
 
 inverte([], []).
